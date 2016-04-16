@@ -35,10 +35,10 @@
 $Name = "XML";
 
 # Root of new project
-$RootDir = "/work/savant_plugin_tutorial";
+$RootDir = "/home/nturley/aire-xml";
 
 # Location of the savant source directory
-$SavantSrc = "/work/savant";
+$SavantSrc = "/home/nturley/savant";
 
 #   Name of text file containing copyright notice or any other 
 # information to place at top of all the files.  If this is "" 
@@ -344,7 +344,7 @@ print OUTFILE "${lcName}_plugin_interface::process_tree(IIR *old_tree, int argc,
 print OUTFILE "  plugin_class_factory   *factory = new ${lcName}_plugin_class_factory();\n";
 print OUTFILE "  IIR                    *new_tree = NULL;\n\n";
 print OUTFILE "  // Transmute the AIRE tree into a new tree containing the plugin nodes\n";
-print OUTFILE "  new_tree = dynamic_cast<IIRBase *>(old_tree)->transmute_tree(factory);\n\n";
+print OUTFILE "  new_tree = dynamic_cast<IIRBase *>(old_tree)->convert_tree(factory);\n\n";
 print OUTFILE "  // TODO:  Insert plugin specific code here!\n\n";
 print OUTFILE "  // Return the newly generated tree to the compiler\n";
 print OUTFILE "  return new_tree;\n";
