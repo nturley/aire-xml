@@ -1,0 +1,5 @@
+language: cpp
+sudo: required
+before_install:
+- autoreconf -i
+script: ./configure --with-clutils=/usr/local & make
