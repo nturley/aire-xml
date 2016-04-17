@@ -2,6 +2,6 @@ language: cpp
 sudo: required
 before_install:
 - source travis-scripts/install-clutils.sh
-- travis-scripts/install-savant.sh
+- source travis-scripts/install-savant.sh
 - autoreconf -i
-script: travis-scripts/build.sh
+script: source travis-scripts/build.sh
