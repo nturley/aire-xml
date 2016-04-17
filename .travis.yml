@@ -1,5 +1,6 @@
 language: cpp
 sudo: required
+dist: trusty
 before_install:
 - source travis-scripts/install-clutils.sh
 - source travis-scripts/install-savant.sh
