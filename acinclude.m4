@@ -24,6 +24,7 @@ AC_MSG_ERROR(The clutils package is required.)
 fi
 if test $cl_cv_lib_clutils != /usr ; then
 LDFLAGS="$LDFLAGS -L$cl_cv_lib_clutils/lib -lclutils -lltdl"
+echo $LDFLAGS
 CPPFLAGS="$CPPFLAGS -I$cl_cv_lib_clutils/include/clutils-0.0"
 fi
 AC_CHECK_HEADER( [Debug.h], ,
